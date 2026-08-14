@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СР УГИБДД · Методичка</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Unbounded:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="SR UGIBDD" />
+    <link rel="manifest" href="site.webmanifest" />
+</head>
+<body>
+    <canvas id="particles"></canvas>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__logo">
+                <span class="sidebar__logo-icon">🚔</span>
+                <span class="sidebar__logo-text">СР УГИБДД</span>
+            </div>
+            <span class="sidebar__badge">Методичка</span>
+        </div>
+        <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+                <li><a href="index.html" class="sidebar__link"><span class="sidebar__icon">🏠</span> Титульная</a></li>
+                <li><a href="#vvedenie" class="sidebar__link active"><span class="sidebar__icon">📌</span> Введение</a></li>
+                <li><a href="#struktura" class="sidebar__link"><span class="sidebar__icon">🏛️</span> Структура и должности</a></li>
+                <li><a href="#portret" class="sidebar__link"><span class="sidebar__icon">👤</span> Портрет сотрудника</a></li>
+                <li><a href="#zakonodatelstvo" class="sidebar__link"><span class="sidebar__icon">⚖️</span> Законодательная база</a></li>
+                <li><a href="#yurisprudenciya" class="sidebar__link"><span class="sidebar__icon">📚</span> Юриспруденция</a></li>
+                <li><a href="#ugolovnoe-pravo" class="sidebar__link"><span class="sidebar__icon">🔗</span> Уголовное право</a></li>
+                <li><a href="#glossariy" class="sidebar__link"><span class="sidebar__icon">📖</span> Глоссарий</a></li>
+                <li><a href="primery.html" class="sidebar__link"><span class="sidebar__icon">🔢</span> Примеры</a></li>
+                <li><a href="pages/sostav/index.html" class="sidebar__link"><span class="sidebar__icon">📋</span> Состав</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar__footer">
+            <button class="theme-toggle" id="themeToggle"><span class="theme-toggle__icon">☀️</span></button>
+            <span class="sidebar__version">v3.0</span>
+        </div>
+    </aside>
+    <main class="main-content">
+        <header class="topbar">
+            <button class="topbar__menu-btn" id="sidebarToggle">☰</button>
+            <div class="topbar__brand">
+                <span class="topbar__brand-icon">🚔</span>
+                <span class="topbar__brand-text">СР УГИБДД · <span>Методичка</span></span>
+            </div>
+            <div class="topbar__info"><span class="topbar__user">👤 Сотрудник</span></div>
+        </header>
+        <div class="page">
+
+            <!-- ========================================================= -->
+            <!-- ВВЕДЕНИЕ -->
+            <!-- ========================================================= -->
+            <section class="section" id="vvedenie">
+                <div class="container">
+                    <div class="section__header">
+                        <h1 class="section__title">📌 Введение</h1>
+                        <p class="section__subtitle">Специализированная рота УГИБДД</p>
+                        <div class="section__divider"></div>
+                    </div>
+
+                    <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+                        <strong>Специализированная рота (СР) УГИБДД</strong> является структурным подразделением органов государственной власти, обеспечивающим выполнение особо важных задач по поддержанию безопасности дорожного движения, охране общественного порядка и пресечению правонарушений на территории обслуживания.
+                    </p>
+                    <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 30px;">
+                        Деятельность сотрудников СР строится на принципах <strong>законности, дисциплины, оперативности и высокой профессиональной подготовки</strong>.
+                    </p>
+
+                    <h2 class="section__heading">Цели СР УГИБДД</h2>
+                    <ul class="styled-list">
+                        <li>Обеспечение безопасности дорожного движения на территории обслуживания.</li>
+                        <li>Превентивное выявление и пресечение правонарушений, включая тяжкие и особо опасные.</li>
+                        <li>Содействие выполнению задач органов государственной власти по охране общественного порядка и защите граждан.</li>
+                        <li>Поддержка оперативных подразделений в рамках специальных мероприятий и рейдов.</li>
+                        <li>Обеспечение правовой и моральной защиты сотрудников и граждан при выполнении служебных задач.</li>
+                    </ul>
+
+                    <h2 class="section__heading">Задачи СР УГИБДД</h2>
+                    <ul class="styled-list">
+                        <li>Контроль за соблюдением правил дорожного движения (ПДД) всеми участниками дорожного движения.</li>
+                        <li>Применение мер административного и уголовного воздействия к нарушителям.</li>
+                        <li>Проведение профилактических и разъяснительных мероприятий среди граждан по вопросам безопасности дорожного движения.</li>
+                        <li>Участие в розыскной деятельности и задержании лиц, совершивших преступления.</li>
+                        <li>Содействие в организации и сопровождении специальных мероприятий: рейдов, проверок, патрулирования.</li>
+                        <li>Обеспечение взаимодействия с другими подразделениями МВД и спецслужбами для оперативного реагирования на угрозы и чрезвычайные ситуации.</li>
+                        <li>Ведение документации, фиксация нарушений и подготовка отчетов по результатам работы.</li>
+                    </ul>
+
+                    <h2 class="section__heading">Функции сотрудников СР</h2>
+                    <ul class="styled-list">
+                        <li>Патрулирование и контроль дорожного движения.</li>
+                        <li>Осуществление остановки транспортных средств при нарушениях ПДД или подозрении на преступление.</li>
+                        <li>Проведение оперативно-розыскных мероприятий в рамках своей компетенции.</li>
+                        <li>Участие в оформлении ДТП, задержании правонарушителей и изъятии доказательств.</li>
+                        <li>Обеспечение безопасности участников дорожного движения и граждан в местах массового скопления людей.</li>
+                        <li>Своевременное применение служебных мер реагирования при угрозах или нарушениях закона.</li>
+                    </ul>
+
+                    <div class="alert alert--info" style="margin-top: 20px;">
+                        <div class="alert__icon">⚡</div>
+                        <div class="alert__content">
+                            <strong>Особенности работы</strong>
+                            <p>Деятельность СР требует высокой дисциплины, профессиональной подготовки, стрессоустойчивости и умения принимать решения в экстремальных ситуациях.</p>
+                            <p style="margin-top: 8px;">Сотрудники должны обладать глубокими знаниями законодательства (УК, КоАП, ФЗ, ПДД, Конституции РФ) и уметь применять их на практике.</p>
+                            <p style="margin-top: 8px;">Важной составляющей является взаимодействие с гражданами, другими подразделениями МВД, а также постоянный контроль собственной правовой грамотности и соблюдение субординации.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================================= -->
+            <!-- СТРУКТУРА И ДОЛЖНОСТИ -->
+            <!-- ========================================================= -->
+            <section class="section" id="struktura">
+                <div class="container">
+                    <div class="section__header">
+                        <h1 class="section__title">🏛️ Структура и должности СР УГИБДД</h1>
+                        <p class="section__subtitle">Иерархия и функциональные обязанности</p>
+                        <div class="section__divider"></div>
+                    </div>
+
+                    <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px;">
+                        Специализированная рота (СР) состоит из нескольких должностей, каждая из которых выполняет определенный круг обязанностей.
+                    </p>
+
+                    <div class="card-grid">
+                        <div class="card card--primary">
+                            <div class="card__icon">⭐</div>
+                            <h3 class="card__title">Командир СР</h3>
+                            <ul class="card__list">
+                                <li>Высшее должностное лицо роты</li>
+                                <li>Организует работу всего подразделения</li>
+                                <li>Контролирует соблюдение дисциплины</li>
+                                <li>Принимает ключевые решения в критических ситуациях</li>
+                                <li>Отвечает за взаимодействие с другими подразделениями</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <div class="card__icon">👔</div>
+                            <h3 class="card__title">Заместитель командира СР</h3>
+                            <ul class="card__list">
+                                <li>Помогает командиру в организации работы</li>
+                                <li>Контролирует выполнение служебных задач</li>
+                                <li>При отсутствии командира исполняет его обязанности</li>
+                                <li>Отвечает за кадровую дисциплину</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <div class="card__icon">📋</div>
+                            <h3 class="card__title">Начальник УЦ СР</h3>
+                            <ul class="card__list">
+                                <li>Ведёт личные дела сотрудников</li>
+                                <li>Отвечает за прохождение стажировок</li>
+                                <li>Следит за соблюдением служебной дисциплины</li>
+                                <li>Осуществляет взаимодействие с отделами УГИБДД</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <div class="card__icon">🎯</div>
+                            <h3 class="card__title">Старший инструктор СР</h3>
+                            <ul class="card__list">
+                                <li>Обучает сотрудников практическим навыкам</li>
+                                <li>Контролирует работу инструкторов и инспекторов</li>
+                                <li>Проводит тренировки по физической подготовке</li>
+                                <li>Отработка действий в критических ситуациях</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <div class="card__icon">📘</div>
+                            <h3 class="card__title">Инструктор СР</h3>
+                            <ul class="card__list">
+                                <li>Проводит практическую подготовку стажёров</li>
+                                <li>Наставляет сотрудников в ежедневной работе</li>
+                                <li>Помогает освоить алгоритмы действий</li>
+                                <li>Следит за техникой безопасности</li>
+                            </ul>
+                        </div>
+
+                        <div class="card card--success">
+                            <div class="card__icon">🚔</div>
+                            <h3 class="card__title">Инспектор СР</h3>
+                            <ul class="card__list">
+                                <li>Основная рабочая должность роты</li>
+                                <li>Патрулирует улицы и дороги</li>
+                                <li>Контролирует соблюдение ПДД</li>
+                                <li>Фиксирует нарушения и проводит профилактику</li>
+                                <li>Участвует в оформлении ДТП и задержаниях</li>
+                            </ul>
+                        </div>
+
+                        <div class="card card--warning">
+                            <div class="card__icon">📖</div>
+                            <h3 class="card__title">Стажёр СР</h3>
+                            <ul class="card__list">
+                                <li>Сотрудник на обучении</li>
+                                <li>Осваивает алгоритмы работы</li>
+                                <li>Изучает нормативную базу</li>
+                                <li>Выполняет задачи под контролем старших</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================================= -->
+            <!-- ПОРТРЕТ СОТРУДНИКА -->
+            <!-- ========================================================= -->
+            <section class="section" id="portret">
+                <div class="container">
+                    <div class="section__header">
+                        <h1 class="section__title">👤 Портрет сотрудника СР</h1>
+                        <p class="section__subtitle">Личностные качества, профессиональные навыки и физическая подготовка</p>
+                        <div class="section__divider"></div>
+                    </div>
+
+                    <h2 class="section__heading">1. Личностные качества</h2>
+                    <div class="card-grid card-grid--2">
+                        <div class="card">
+                            <div class="card__icon">🎯</div>
+                            <h3 class="card__title">Дисциплинированность</h3>
+                            <p class="card__desc">Соблюдение правил, субординации и внутренних нормативов.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card__icon">🧠</div>
+                            <h3 class="card__title">Стрессоустойчивость</h3>
+                            <p class="card__desc">Способность сохранять спокойствие в экстремальных и непредвиденных ситуациях.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card__icon">⚖️</div>
+                            <h3 class="card__title">Ответственность</h3>
+                            <p class="card__desc">Осознание важности своих действий и их последствий для граждан и коллег.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card__icon">👁️</div>
+                            <h3 class="card__title">Внимательность и наблюдательность</h3>
+                            <p class="card__desc">Умение быстро замечать нарушения и потенциальные угрозы.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card__icon">🤝</div>
+                            <h3 class="card__title">Командный дух</h3>
+                            <p class="card__desc">Способность работать в составе подразделения, взаимодействовать с коллегами.</p>
+                        </div>
+                    </div>
+
+                    <h2 class="section__heading">2. Профессиональные навыки</h2>
+                    <ul class="styled-list">
+                        <li>Знание <strong>ПДД, КоАП, УК, федеральных законов</strong> и нормативных актов, относящихся к работе.</li>
+                        <li>Навыки <strong>патрулирования и остановки транспортных средств</strong>.</li>
+                        <li>Умение <strong>оформлять ДТП</strong> и административные протоколы.</li>
+                        <li>Базовая подготовка к <strong>оперативно-розыскной деятельности</strong> в рамках компетенции СР.</li>
+                        <li>Владение средствами связи и документацией для оперативного реагирования.</li>
+                    </ul>
+
+                    <h2 class="section__heading">3. Физическая подготовка</h2>
+                    <ul class="styled-list">
+                        <li>Высокий уровень общей физической формы.</li>
+                        <li>Выносливость и сила для работы на маршрутах, задержания нарушителей, участия в спецоперациях.</li>
+                        <li>Умение действовать при неблагоприятных погодных и дорожных условиях.</li>
+                    </ul>
+
+                    <h2 class="section__heading">4. Морально-психологические характеристики</h2>
+                    <ul class="styled-list">
+                        <li>Хладнокровие при опасных ситуациях.</li>
+                        <li>Умение принимать решения быстро, но обоснованно.</li>
+                        <li>Этичное и корректное общение с гражданами и коллегами.</li>
+                        <li>Стремление к постоянному обучению и повышению квалификации.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ========================================================= -->
+            <!-- ЗАКОНОДАТЕЛЬНАЯ БАЗА -->
+            <!-- ========================================================= -->
+            <section class="section" id="zakonodatelstvo">
+                <div class="container">
+                    <div class="section__header">
+                        <h1 class="section__title">⚖️ Основы законодательной базы</h1>
+                        <p class="section__subtitle">УК, КоАП, ФЗ, Конституция, Порядок надзора, ПДД</p>
+                        <div class="section__divider"></div>
+                    </div>
+
+                    <div class="alert alert--info">
+                        <div class="alert__icon">📌</div>
+                        <div class="alert__content">
+                            <strong>Важно!</strong>
+                            <p>Все законы, нормативно-правовые акты и акты управления должностных лиц вступают в юридическую силу с момента их официального опубликования.</p>
+                        </div>
+                    </div>
+
+                    <h2 class="section__heading">Уголовный кодекс (УК РФ) — ключевые статьи</h2>
+
+                    <div class="tabs">
+                        <div class="tabs__nav">
+                            <button class="tabs__btn active" data-tab="uk1">Глава 1</button>
+                            <button class="tabs__btn" data-tab="uk2">Глава 2</button>
+                            <button class="tabs__btn" data-tab="uk3">Глава 5</button>
+                            <button class="tabs__btn" data-tab="uk4">Глава 6</button>
+                            <button class="tabs__btn" data-tab="uk5">Глава 8</button>
+                            <button class="tabs__btn" data-tab="uk6">Глава 9-12</button>
+                        </div>
+
+                        <!-- Глава 1 -->
+                        <div class="tabs__content active" id="uk1">
+                            <h3>Глава 1. Преступления против жизни и здоровья личности</h3>
+                            <div class="highlight">
+                                <p><strong>Статья 4.</strong> Умышленное причинение тяжкого вреда здоровью — лишение свободы на <strong>6 лет</strong></p>
+                                <p><strong>Статья 5.</strong> Умышленное причинение средней тяжести вреда здоровью — лишение свободы на <strong>4 года</strong></p>
+                                <p><strong>Статья 6.</strong> Умышленное причинение лёгкого вреда здоровью — лишение свободы на <strong>2 года</strong></p>
+                            </div>
+                            <p><strong>Статья 7.</strong> Побои — лишение свободы на <strong>2 года</strong></p>
+                            <p><strong>Статья 8.</strong> Угроза убийством или причинением тяжкого вреда здоровью — лишение свободы на <strong>2 года</strong></p>
+                        </div>
+
+                        <!-- Глава 2 -->
+                        <div class="tabs__content" id="uk2">
+                            <h3>Глава 2. Преступления против свободы, чести и достоинства личности</h3>
+                            <div class="highlight">
+                                <p><strong>Статья 12.</strong> Похищение человека — лишение свободы на <strong>4 года</strong></p>
+                                <p><strong>Статья 13.</strong> Незаконное лишение свободы — лишение свободы на <strong>4 года</strong></p>
+                            </div>
+                            <p><strong>Статья 14.</strong> Клевета — штраф 50.000-100.000 рублей или лишение свободы на <strong>2 года</strong></p>
+                            <p><strong>Статья 19.</strong> Нарушение тайны переписки или телефонных переговоров — лишение свободы на <strong>2 года</strong></p>
+                            <p><strong>Статья 20.</strong> Нарушение неприкосновенности жилища — лишение свободы на <strong>2 года</strong></p>
+                        </div>
+
+                        <!-- Глава 5 -->
+                        <div class="tabs__content" id="uk3">
+                            <h3>Глава 5. Преступления против собственности</h3>
+                            <div class="highlight">
+                                <p><strong>Статья 22.</strong> Кража — лишение свободы на <strong>6 лет</strong></p>
+                                <p><strong>Статья 23.</strong> Грабеж — лишение свободы на <strong>8 лет</strong></p>
+                            </div>
+                            <p><strong>Статья 24.</strong> Разбой — лишение свободы на <strong>4 года</strong></p>
+                            <p><strong>Статья 26.</strong> Вымогательство — лишение свободы на <strong>4 года</strong></p>
+                            <p><strong>Статья 27.</strong> Умышленное уничтожение или повреждение имущества — лишение свободы на <strong>2 года</strong></p>
+                        </div>
+
+                        <!-- Глава 6 -->
+                        <div class="tabs__content" id="uk4">
+                            <h3>Глава 6. Преступления против общественной безопасности</h3>
+                            <div class="highlight">
+                                <p><strong>Статья 33.</strong> Бандитизм — лишение свободы на <strong>4 года</strong></p>
+                                <p><strong>Статья 36.</strong> Массовые беспорядки — лишение свободы на <strong>4 года</strong></p>
+                            </div>
+                            <p><strong>Статья 37.</strong> Хулиганство — лишение свободы на <strong>2 года</strong></p>
+                            <p><strong>Статья 38.</strong> Вандализм — лишение свободы на <strong>2 года</strong></p>
+                            <p><strong>Статья 39.</strong> Незаконное проникновение на охраняемый объект — лишение свободы на <strong>8 лет</strong></p>
+                            <p><strong>Статья 40.</strong> Незаконное приобретение, передача, изготовление оружия — лишение свободы на <strong>4 года</strong></p>
+                            <p><strong>Статья 41.</strong> Незаконное использование или ношение оружия — лишение свободы на <strong>4 года</strong></p>
+                            <p><strong>Статья 42.</strong> Ношение огнестрельного оружия в открытом виде в общественных местах — лишение свободы на <strong>4 года</strong></p>
+                        </div>
+
+                        <!-- Глава 8 -->
+                        <div class="tabs__content" id="uk5">
+                            <h3>Глава 8. Преступления против здоровья населения и общественной нравственности</h3>
+                            <div class="highlight">
+                                <p><strong>Статья 45.</strong> Незаконное изготовление, приобретение, продажа, хранение наркотических средств — лишение свободы на <strong>7 лет</strong></p>
+                            </div>
+                            <p><strong>Примечание:</strong> значительный размер — зелёный чай от 6 грамм, мятная пудра от 2 грамм. Добровольная сдача освобождает от ответственности.</p>
+                        </div>
+
+                        <!-- Глава 9-12 -->
+                        <div class="tabs__content" id="uk6">
+                            <h3>Главы 9-12. Преступления против государственной власти, правосудия, порядка управления и военной службы</h3>
+                            <div class="highlight">
+                                <p><strong>Статья 48.</strong> Посягательство на жизнь государственного деятеля — лишение свободы на <strong>7 лет</strong></p>
+                                <p><strong>Статья 51.</strong> Превышение должностных полномочий — лишение свободы на <strong>4 года</strong></p>
+                                <p><strong>Статья 51.1.</strong> Злоупотребление должностными полномочиями — лишение свободы на <strong>4 года</strong></p>
+                            </div>
+                            <p><strong>Статья 53.</strong> Присвоение полномочий должностного лица — лишение свободы на <strong>3 года</strong></p>
+                            <p><strong>Статья 54.</strong> Получение взятки — лишение свободы на <strong>5 лет</strong></p>
+                            <p><strong>Статья 55.</strong> Дача взятки — лишение свободы на <strong>5 лет</strong></p>
+                            <p><strong>Статья 56.</strong> Халатность — штраф 150.000-1.000.000 рублей или лишение свободы на <strong>4 года</strong></p>
+                            <p><strong>Статья 60.</strong> Незаконные задержание, заключение под стражу — штраф 200.000-500.000 рублей или лишение свободы на <strong>5 лет</strong></p>
+                            <p><strong>Статья 65.</strong> Посягательство на жизнь сотрудника правоохранительного органа — лишение свободы на <strong>6 лет</strong></p>
+                            <p><strong>Статья 66.</strong> Применение насилия в отношении представителя власти — лишение свободы на <strong>5 лет</strong></p>
+                            <p><strong>Статья 67.</strong> Оскорбление представителя власти — лишение свободы на <strong>2 года</strong></p>
+                            <p><strong>Статья 71.</strong> Самовольное оставление части или места службы — лишение свободы на <strong>5 лет</strong></p>
+                            <p><strong>Статья 72.</strong> Дезертирство — лишение свободы на <strong>8 лет</strong></p>
+                        </div>
+                    </div>
+
+                    <h2 class="section__heading" style="margin-top: 30px;">Кодекс об административных правонарушениях (КоАП)</h2>
+                    <div class="card-grid card-grid--3">
+                        <div class="card"><div class="card__icon">🚗</div><h3 class="card__title">Главы 2-3</h3><p class="card__desc">Техническое состояние ТС · Отсутствие права управления</p></div>
+                        <div class="card"><div class="card__icon">🔄</div><h3 class="card__title">Главы 8-9</h3><p class="card__desc">Маневрирование · Расположение, обгон</p></div>
+                        <div class="card"><div class="card__icon">🛑</div><h3 class="card__title">Главы 10-13</h3><p class="card__desc">Знаки и разметка · Преимущество · Остановка и стоянка · Безопасность движения</p></div>
+                        <div class="card"><div class="card__icon">💥</div><h3 class="card__title">Глава 14</h3><p class="card__desc">Дорожно-транспортное происшествие</p></div>
+                        <div class="card"><div class="card__icon">👮</div><h3 class="card__title">Глава 15</h3><p class="card__desc">Полиция</p></div>
+                        <div class="card"><div class="card__icon">⚖️</div><h3 class="card__title">Главы 16-20</h3><p class="card__desc">Права граждан · Здоровье · Общественный порядок · Порядок управления</p></div>
+                    </div>
+
+                    <h2 class="section__heading">Федеральный закон №3-ФЗ «О полиции»</h2>
+                    <div class="alert alert--info">
+                        <div class="alert__icon">📜</div>
+                        <div class="alert__content">
+                            <p>Определяет правовые основы деятельности полиции в государстве. Цель — обеспечить защиту прав и свобод человека и гражданина, охрану общественного порядка, борьбу с преступностью и обеспечение общественной безопасности.</p>
+                            <p style="margin-top: 8px;"><strong>Ключевые главы:</strong> Гл. 1 (Общие положения), Гл. 2 (Принципы деятельности), Гл. 3 (Обязанности и права полиции), Гл. 4 (Применение мер госпринуждения), Гл. 5 (Применение физической силы, спецсредств и оружия), Гл. 6 (Контроль и надзор), Гл. 7 (Правовое положение сотрудника).</p>
+                        </div>
+                    </div>
+
+                    <h2 class="section__heading">Федеральный закон №1-ФЗ «Об оружии»</h2>
+                    <div class="alert alert--info">
+                        <div class="alert__icon">🔫</div>
+                        <div class="alert__content">
+                            <p>Регулирует правовые основы оборота, хранения, ношения и применения оружия. Устанавливает разграничение между гражданским и служебным оружием.</p>
+                            <p style="margin-top: 8px;"><strong>Статьи:</strong> 1 (Виды оружия), 2 (Гражданское оружие), 3 (Служебное оружие), 4 (Применение оружия гражданами), 5 (Применение оружия органами исполнительной власти), 6 (Ограничения), 7 (Контроль за оборотом).</p>
+                        </div>
+                    </div>
+
+                    <h2 class="section__heading">Конституция Нижегородской области</h2>
+                    <div class="card-grid card-grid--2">
+                        <div class="card card--primary">
+                            <div class="card__icon">📜</div>
+                            <h3 class="card__title">Глава 1. Основы конституционного строя</h3>
+                            <ul class="card__list">
+                                <li><strong>Ст. 1:</strong> Личность, её права и свободы — высшая ценность</li>
+                                <li><strong>Ст. 3:</strong> Конституция имеет высшую юридическую силу</li>
+                                <li><strong>Ст. 7:</strong> Разделение властей: законодательная, исполнительная, судебная</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <div class="card__icon">🛡️</div>
+                            <h3 class="card__title">Глава 2. Права и свободы человека и гражданина</h3>
+                            <ul class="card__list">
+                                <li><strong>Ст. 8-9:</strong> Равенство перед законом, неотчуждаемость прав</li>
+                                <li><strong>Ст. 10:</strong> Достоинство личности охраняется государством</li>
+                                <li><strong>Ст. 11-12:</strong> Свобода передвижения, мысли и слова</li>
+                                <li><strong>Ст. 18:</strong> Презумпция невиновности</li>
+                                <li><strong>Ст. 20:</strong> Право не свидетельствовать против себя</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2 class="section__heading">Порядок надзора в сфере безопасности дорожного движения</h2>
+                    <div class="method-block">
+                        <h3 class="method-block__title">Глава 4. Остановка транспортного средства</h3>
+                        <div class="code-block">
+                            <div class="code-block__header"><button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button></div>
+                            <pre class="code-block__content"><code>13. Сотрудник имеет право произвести остановку ТС:
+
+13.1. При выявлении нарушений ПДД, технических неисправностей, причастности к правонарушению.
+13.2. Для совершения процессуальных действий.
+13.3. Для проверки документов.
+13.4. При регулировании дорожного движения.
+13.5. При проведении мероприятий по предупреждению ДТП.
+
+14. Требование об остановке подается с помощью ГГУ или жестом руки.
+
+15. Запрещается остановка в местах, где это запрещено ПДД (кроме экстренных случаев).
+
+16. ТС со спецсигналами может быть остановлено при наличии данных о правонарушении или проведении мероприятий.</code></pre>
+                        </div>
+
+                        <h3 class="method-block__title">Глава 5. Проверка документов</h3>
+                        <div class="code-block">
+                            <div class="code-block__header"><button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button></div>
+                            <pre class="code-block__content"><code>17. Сотрудник вправе требовать документы:
+- при наличии данных о нарушении ПДД
+- при остановке ТС
+- если стоящее ТС создает угрозу безопасности</code></pre>
+                        </div>
+
+                        <h3 class="method-block__title">Глава 6. Выезд на место ДТП</h3>
+                        <div class="code-block">
+                            <div class="code-block__header"><button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button></div>
+                            <pre class="code-block__content"><code>18. Выезд осуществляется при поступлении официального сообщения о ДТП.
+
+19. По прибытии сотрудник:
+- обеспечивает ограждение места ДТП
+- устанавливает участников ДТП, проверяет документы
+- выявляет свидетелей
+- принимает меры к сохранности следов
+- выясняет данные о скрывшемся ТС (объявляет в розыск)
+- фиксирует причины и условия ДТП</code></pre>
+                        </div>
+
+                        <h3 class="method-block__title">Глава 7. Досмотр транспортного средства</h3>
+                        <div class="code-block">
+                            <div class="code-block__header"><button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button></div>
+                            <pre class="code-block__content"><code>21. Досмотр ТС проводится в целях обнаружения орудий совершения правонарушения.
+
+22. Досмотр осуществляется в присутствии лица, во владении которого оно находится. В неотложных случаях — в отсутствие владельца.</code></pre>
+                        </div>
+                    </div>
+
+                    <h2 class="section__heading">Правила дорожного движения (ПДД) — ключевые разделы</h2>
+                    <div class="card-grid card-grid--3">
+                        <div class="card"><div class="card__icon">📋</div><h3 class="card__title">Глава 2</h3><p class="card__desc">Общие обязанности водителей</p></div>
+                        <div class="card"><div class="card__icon">🚨</div><h3 class="card__title">Глава 3</h3><p class="card__desc">Применение специальных сигналов</p></div>
+                        <div class="card"><div class="card__icon">🚶</div><h3 class="card__title">Глава 4-5</h3><p class="card__desc">Обязанности пешеходов и пассажиров</p></div>
+                        <div class="card"><div class="card__icon">💡</div><h3 class="card__title">Глава 14</h3><p class="card__desc">Пользование внешними световыми приборами</p></div>
+                        <div class="card"><div class="card__icon">🔄</div><h3 class="card__title">Глава 8-10</h3><p class="card__desc">Обгон · Остановка · Проезд перекрестков</p></div>
+                        <div class="card"><div class="card__icon">🛑</div><h3 class="card__title">Глава 7</h3><p class="card__desc">Начало движения · Маневрирование</p></div>
+                    </div>
+
+                    <div class="alert alert--danger" style="margin-top: 20px;">
+                        <div class="alert__icon">⚠️</div>
+                        <div class="alert__content">
+                            <strong>Запрещено водителям (ст. 2.3 ПДД):</strong>
+                            <ul>
+                                <li>Управлять ТС в состоянии опьянения</li>
+                                <li>Пересекать организованные колонны</li>
+                                <li>Пользоваться телефоном без hands-free во время движения</li>
+                                <li>Опасное вождение (резкие перестроения, торможения, препятствование обгону)</li>
+                                <li>Эксплуатация ТС с неисправностями (тормоза, руль, световые приборы, шины)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2 class="section__heading">ФЗ «О противодействии терроризму» — ст. 6</h2>
+                    <div class="alert alert--warning">
+                        <div class="alert__icon">🔒</div>
+                        <div class="alert__content">
+                            <strong>Применение специальных мер во время КТО:</strong>
+                            <ul>
+                                <li>Проверка документов у лиц в масках</li>
+                                <li>Удаление граждан с оцепленных территорий</li>
+                                <li>Усиление охраны объектов</li>
+                                <li>Использование транспорта для доставки пострадавших</li>
+                                <li>Ограничение движения ТС и пешеходов</li>
+                                <li>Личный досмотр граждан в масках</li>
+                                <li>Остановка ТС без номеров или с номерами ЧОП</li>
+                                <li>Применение оружия (ТТ, СВД, АН-94, ОЦ-14, Striker-12, Desert Eagle)</li>
+                            </ul>
+                            <p style="margin-top: 8px;"><strong>Обязанности руководства:</strong> обеспечение личного состава спецобмундированием, доведение приказов о введении КТО.</p>
+                            <p style="margin-top: 8px;"><strong>Запрет:</strong> в период КТО и с 10:00 до 22:00 патрули с составом менее 2 человек запрещены.</p>
+                        </div>
+                    </div>
+
+                    <h2 class="section__heading">ФЗ «О территориях с ограниченным доступом»</h2>
+                    <div class="card-grid card-grid--2">
+                        <div class="card">
+                            <div class="card__icon">🏛️</div>
+                            <h3 class="card__title">Служебные территории</h3>
+                            <ul class="card__list">
+                                <li>Участки в пользовании у госорганов</li>
+                                <li>Доступ только сотрудникам и уполномоченным лицам</li>
+                                <li>Красная зона — немедленное задержание</li>
+                                <li>Жёлтая зона — проверка документов</li>
+                            </ul>
+                        </div>
+                        <div class="card card--danger">
+                            <div class="card__icon">⛔</div>
+                            <h3 class="card__title">Охраняемые территории</h3>
+                            <ul class="card__list">
+                                <li>Воинская часть №20115</li>
+                                <li>Исправительная колония «Кресты»</li>
+                                <li>Военизированные и стратегические объекты</li>
+                                <li>Оцепленные территории</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================================= -->
+            <!-- ЮРИСПРУДЕНЦИЯ -->
+            <!-- ========================================================= -->
+            <section class="section" id="yurisprudenciya">
+                <div class="container">
+                    <div class="section__header">
+                        <h1 class="section__title">📚 Юриспруденция</h1>
+                        <p class="section__subtitle">Наука о праве для сотрудников СР</p>
+                        <div class="section__divider"></div>
+                    </div>
+
+                    <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px;">
+                        <strong>Юриспруденция</strong> — это наука о праве, а также совокупность знаний и практических навыков, необходимых для правильного применения законодательства. Для сотрудников СР УГИБДД знание юриспруденции критически важно для законного и эффективного исполнения служебных обязанностей.
+                    </p>
+
+                    <h2 class="section__heading">1. Основные понятия</h2>
+                    <div class="card-grid card-grid--2">
+                        <div class="card">
+                            <div class="card__icon">⚖️</div>
+                            <h3 class="card__title">Право</h3>
+                            <p class="card__desc">Система общеобязательных правил поведения, установленных государством.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card__icon">📜</div>
+                            <h3 class="card__title">Норма права</h3>
+                            <p class="card__desc">Конкретное правило, регулирующее отношения между людьми и государством.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card__icon">👤</div>
+                            <h3 class="card__title">Субъект права</h3>
+                            <p class="card__desc">Лицо, обладающее правоспособностью и дееспособностью (граждане, сотрудники СР, организации).</p>
+                        </div>
+                        <div class="card">
+                            <div class="card__icon">🎯</div>
+                            <h3 class="card__title">Объект права</h3>
+                            <p class="card__desc">То, на что направлено действие нормы (имущество, жизнь, здоровье, общественный порядок).</p>
+                        </div>
+                        <div class="card card--danger">
+                            <div class="card__icon">🚨</div>
+                            <h3 class="card__title">Правонарушение</h3>
+                            <p class="card__desc">Действие или бездействие, нарушающее нормы права и влекущее юридическую ответственность.</p>
+                        </div>
+                    </div>
+
+                    <h2 class="section__heading">2. Виды нормативно-правовых актов</h2>
+                    <ul class="styled-list">
+                        <li><strong>Конституция РФ</strong> — основной закон страны, регулирующий права и обязанности граждан и сотрудников правоохранительных органов.</li>
+                        <li><strong>Федеральные законы</strong> (ФЗ №1, №3, №7, №9 и др.) — устанавливают обязанности и полномочия сотрудников СР.</li>
+                        <li><strong>Кодексы</strong> (УК РФ, КоАП РФ) — определяют состав преступлений и административных правонарушений.</li>
+                        <li><strong>Подзаконные акты и положения</strong> — внутренние регламенты, инструкции и приказы МВД/ВЧ/ФСИН/ЕСС/УГИБДД/ФСБ/ПР.</li>
+                    </ul>
+
+                    <h2 class="section__heading">3. Применение юриспруденции в работе СР</h2>
+                    <ul class="styled-list">
+                        <li><strong>Фиксация нарушений:</strong> оформление протоколов по КоАП, составление рапортов и материалов для уголовного преследования.</li>
+                        <li><strong>Принятие решений в экстремальных ситуациях:</strong> правильная квалификация действий граждан, чтобы избежать превышения полномочий.</li>
+                        <li><strong>Взаимодействие с гражданами:</strong> знание прав и обязанностей участников дорожного движения позволяет корректно общаться и объяснять действия сотрудников.</li>
+                        <li><strong>Контроль законности действий:</strong> сотрудники должны проверять, чтобы их собственные действия соответствовали нормам права и внутренним регламентам.</li>
+                    </ul>
+
+                    <h2 class="section__heading">4. Практическое значение</h2>
+                    <div class="alert alert--success">
+                        <div class="alert__icon">✅</div>
+                        <div class="alert__content">
+                            <ul>
+                                <li>Позволяет действовать в рамках закона, минимизируя риски для себя и граждан.</li>
+                                <li>Обеспечивает правильную квалификацию правонарушений, что критически важно для расследования ДТП, задержания преступников и оформления административных материалов.</li>
+                                <li>Формирует профессиональную правовую культуру и дисциплину среди сотрудников СР.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================================= -->
+            <!-- УГОЛОВНОЕ ПРАВО -->
+            <!-- ========================================================= -->
+            <section class="section" id="ugolovnoe-pravo">
+                <div class="container">
+                    <div class="section__header">
+                        <h1 class="section__title">🔗 Уголовное право</h1>
+                        <p class="section__subtitle">Отрасль права для сотрудников СР</p>
+                        <div class="section__divider"></div>
+                    </div>
+
+                    <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px;">
+                        <strong>Уголовное право</strong> — это отрасль права, регулирующая общественные отношения, связанные с совершением преступлений, и устанавливающая меры уголовной ответственности. Для сотрудников СР УГИБДД знание уголовного права необходимо для правильной квалификации преступлений, соблюдения закона и предотвращения неправомерных действий.
+                    </p>
+
+                    <h2 class="section__heading">1. Общая часть УК РФ</h2>
+                    <div class="card-grid card-grid--2">
+                        <div class="card card--danger">
+                            <div class="card__icon">🔍</div>
+                            <h3 class="card__title">Состав преступления</h3>
+                            <ul class="card__list">
+                                <li><strong>Объект</strong> — общественные отношения (жизнь, здоровье, имущество)</li>
+                                <li><strong>Субъект</strong> — лицо, совершившее преступление</li>
+                                <li><strong>Объективная сторона</strong> — действия или бездействие, повлекшие вред</li>
+                                <li><strong>Субъективная сторона</strong> — вина (умысел или неосторожность)</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <div class="card__icon">⚖️</div>
+                            <h3 class="card__title">Квалификация преступлений</h3>
+                            <p class="card__desc">Зависит от тяжести последствий, способа совершения и обстоятельств.</p>
+                            <p class="card__desc" style="margin-top: 8px;">Преступления бывают <strong>умышленные</strong> и <strong>по неосторожности</strong>.</p>
+                        </div>
+                    </div>
+
+                    <h2 class="section__heading">2. Особенная часть УК РФ (важное для сотрудников СР)</h2>
+                    <ul class="styled-list">
+                        <li><strong>Против личности:</strong> причинение вреда здоровью, убийство, угрозы.</li>
+                        <li><strong>Против собственности:</strong> кража, хулиганство, умышленные повреждения имущества.</li>
+                        <li><strong>Против безопасности движения и общественной безопасности:</strong> нарушения ПДД, аварии с тяжкими последствиями, повреждение ТС, хулиганство на дороге.</li>
+                        <li><strong>Против государственной власти и правосудия:</strong> сопротивление сотруднику полиции, превышение полномочий.</li>
+                    </ul>
+
+                    <h2 class="section__heading">3. Практическое применение для сотрудников СР</h2>
+                    <div class="code-block">
+                        <div class="code-block__header"><button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button></div>
+                        <pre class="code-block__content"><code>ДТП с тяжким вредом или смертью — квалификация по ст. 43 УК РФ
+Умышленные повреждения чужого имущества — ст. 27 УК РФ
+Хулиганство — ст. 37 УК РФ
+Преступления против жизни и здоровья — ст. 1, 4-6 УК РФ
+Преступления против собственности — кражи, грабежи, повреждение имущества</code></pre>
+                    </div>
+
+                    <h2 class="section__heading">4. Основные обязанности сотрудника СР в рамках уголовного права</h2>
+                    <ul class="styled-list">
+                        <li>Правильно фиксировать признаки состава преступления на месте.</li>
+                        <li>Соблюдать закон при задержании и допросе граждан.</li>
+                        <li>Своевременно уведомлять вышестоящее руководство о тяжких правонарушениях.</li>
+                        <li>Собирать доказательства и оформлять материалы, пригодные для уголовного производства.</li>
+                    </ul>
+
+                    <h2 class="section__heading">5. Практические рекомендации</h2>
+                    <div class="alert alert--info">
+                        <div class="alert__icon">💡</div>
+                        <div class="alert__content">
+                            <ul>
+                                <li>Всегда отличать административные правонарушения от преступлений.</li>
+                                <li>Действовать строго в рамках закона, чтобы избежать превышения полномочий.</li>
+                                <li>В работе ориентироваться на состав преступления: объект, субъект, действия, вина.</li>
+                                <li>Постоянно повышать правовую грамотность, чтобы быстро и правильно квалифицировать ситуации на дороге.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================================= -->
+            <!-- ГЛОССАРИЙ -->
+            <!-- ========================================================= -->
+            <section class="section" id="glossariy">
+                <div class="container">
+                    <div class="section__header">
+                        <h1 class="section__title">📖 Глоссарий</h1>
+                        <p class="section__subtitle">Основные термины и понятия</p>
+                        <div class="section__divider"></div>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Термин</th>
+                                    <th>Определение</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>СР УГИБДД</strong></td><td>Специализированная рота Управления ГИБДД — структурное подразделение для выполнения особо важных задач.</td></tr>
+                                <tr><td><strong>ПДД</strong></td><td>Правила дорожного движения — единые требования к участникам дорожного движения.</td></tr>
+                                <tr><td><strong>КоАП</strong></td><td>Кодекс об административных правонарушениях — регулирует административную ответственность.</td></tr>
+                                <tr><td><strong>УК РФ</strong></td><td>Уголовный кодекс Российской Федерации — регулирует уголовную ответственность.</td></tr>
+                                <tr><td><strong>КТО</strong></td><td>Контртеррористическая операция — комплекс мероприятий по пресечению террористических актов.</td></tr>
+                                <tr><td><strong>ДТП</strong></td><td>Дорожно-транспортное происшествие — событие, возникшее при движении ТС с участием людей или имущества.</td></tr>
+                                <tr><td><strong>Субординация</strong></td><td>Система служебных отношений, связанных с иерархией и дисциплиной.</td></tr>
+                                <tr><td><strong>Презумпция невиновности</strong></td><td>Лицо считается невиновным, пока его вина не доказана судом.</td></tr>
+                                <tr><td><strong>Халатность</strong></td><td>Неисполнение или ненадлежащее исполнение должностным лицом своих обязанностей.</td></tr>
+                                <tr><td><strong>Оцепление</strong></td><td>Временное ограничение доступа к территории для обеспечения безопасности.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="table__note">* Глоссарий содержит основные термины, используемые в деятельности СР УГИБДД.</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <span class="footer__logo">🚔 СР УГИБДД</span>
+                <p class="footer__desc">Методическое пособие для сотрудников</p>
+            </div>
+            <div class="footer__links">
+                <a href="#vvedenie">Введение</a>
+                <a href="#struktura">Структура</a>
+                <a href="#zakonodatelstvo">Законодательство</a>
+                <a href="primery.html">Примеры</a>
+                <a href="pages/sostav/index.html">Состав</a>
+            </div>
+            <div class="footer__copy">
+                <p>© 2026 Нижегородская область</p>
+                <p>Разработано для СР УГИБДД</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

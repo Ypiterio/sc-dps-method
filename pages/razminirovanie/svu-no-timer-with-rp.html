@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СВУ без таймера · /do · СР ДПС</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Unbounded:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/themes.css">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg" />
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="DPS Method" />
+    <link rel="manifest" href="../../site.webmanifest" />
+</head>
+<body>
+
+    <canvas id="particles"></canvas>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__logo">
+                <span class="sidebar__logo-icon">🚔</span>
+                <span class="sidebar__logo-text">СР ДПС</span>
+            </div>
+            <span class="sidebar__badge">Методичка</span>
+        </div>
+        <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+                <li><a href="../../primery.html" class="sidebar__link">
+                    <span class="sidebar__icon">🏠</span> Главная
+                </a></li>
+                <li><a href="svu-timer-no-rp.html" class="sidebar__link">
+                    <span class="sidebar__icon">⏱️</span> СВУ таймер /try
+                </a></li>
+                <li><a href="svu-timer-with-rp.html" class="sidebar__link">
+                    <span class="sidebar__icon">⏱️</span> СВУ таймер /do
+                </a></li>
+                <li><a href="svu-no-timer-with-rp.html" class="sidebar__link active">
+                    <span class="sidebar__icon">💥</span> СВУ без таймера /do
+                </a></li>
+                <li><a href="svu-no-timer-no-rp.html" class="sidebar__link">
+                    <span class="sidebar__icon">💥</span> СВУ без таймера /try
+                </a></li>
+            </ul>
+        </nav>
+        <div class="sidebar__footer">
+            <button class="theme-toggle" id="themeToggle">
+                <span class="theme-toggle__icon">☀️</span>
+            </button>
+            <span class="sidebar__version">v2.0</span>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <button class="topbar__menu-btn" id="sidebarToggle">☰</button>
+            <div class="topbar__brand">
+                <span class="topbar__brand-icon">🚔</span>
+                <span class="topbar__brand-text">СР ДПС · <span>Методичка</span></span>
+            </div>
+            <div class="topbar__info">
+                <span class="topbar__user">👤 Сотрудник</span>
+            </div>
+        </header>
+
+        <div class="page">
+            <section class="section">
+                <div class="section__header">
+                    <h1 class="section__title">💥 СВУ без таймера</h1>
+                    <p class="section__subtitle">С отыгровщиком · /do</p>
+                    <div class="section__divider"></div>
+                </div>
+
+                <div class="alert alert--info">
+                    <div class="alert__icon">ℹ️</div>
+                    <div class="alert__content">
+                        <strong>Особенности:</strong>
+                        <p>• ВСЕ /do отыгровки</p>
+                        <p>• Отыгровщик даёт информацию через /do</p>
+                        <p>• Таймера нет, перекус проводов в порядке: + → - → 0</p>
+                    </div>
+                </div>
+
+                <div class="method-block">
+                    <h3 class="method-block__title">СВУ без таймера через /do</h3>
+                    <p class="method-block__note">(с отыгровщиком)</p>
+
+                    <div class="code-block">
+                        <div class="code-block__header">
+                            <span class="code-block__badge">/do</span>
+                            <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                        </div>
+                        <pre class="code-block__content"><code>/me берёт набор сапёра, ЗКС из машины, Пелену-12 и кейс для СВУ
+/me одевает ЗКС.
+/me включает ДРП и смотрит на лампочку
+/do Какая лампочка на приборе?
+((отыгровщик)) /do Красная.
+/do Какая лампочка на приборе?
+((отыгровщик)) /do Желтая. ((т.е. СВУ уже близко, около 50 метров))
+/do Какая лампочка на приборе?
+((отыгровщик)) /do Желтая.
+/do Какая лампочка на приборе?
+((отыгровщик)) /do Зелёная. ((т.е. СВУ в зрительной достигаемости, метров 5))
+/me выключает ДРП и убирает
+/me достаёт из набора сапёра Пелену-12 и устанавливает его на землю не забыв включить
+/me достаём из разгрузки индикаторную отвёртку
+/me смотрит на СВУ.
+/do Сколько болтов на крышке?
+((отыгровщик)) /do 4 болта.
+/me с помощью индикаторной отвертки откручивает болты
+/me приподнимая крышку смотрит под неё
+/do Что-то находится на задней стороне крышки?
+((отыгровщик)) /do Леска на задней стороне крышки.
+/do Леска ведет к взрывателю?
+((отыгровщик)) /do Да.
+/me берёт с разгрузки охотничий нож и перерезает леску, убирает крышку СВУ
+/me смотрит в СВУ
+/do Сколько проводов в СВУ?
+((отыгровщик)) /do 3 провода.
+/me достаёт мультиметр, выставляет значение 200 ватт постоянного тока
+/me чёрный щуп ставит на метал покрытие СВУ и прозваниет красным щупом все провода
+/do Какое напряжение первого провода показал мультиметр?
+((отыгровщик)) /do 23,6.
+/me переставляет красный щуп на второй провод
+/do Какое напряжение второго провода показал мультиметр?
+((отыгровщик)) /do 0.
+/me переставляет красный щуп на третий провод
+/do Какое напряжение третьего провода показал мультиметр?
+((отыгровщик)) /do -23,6.
+/me убирает красный и чёрный щуп и выключает мультиметр
+/me достаёт из разгрузки бокорезы и перекусывает провода в порядке 1 - 3 - 2 ((+, -, 0, если был таймер, то сначала 0))
+/me снимает с крепления бронежилета титановый кейс, затем открывает его и ставит возле СВУ
+/me вынимает из устройства тротиловую шашку, отделяет от неё шашку взрывателя, а от шашки взрывателя капсюль
+/me укладывает в бронированный кейс, после чего закрываем его, затем цепляет на лямки бронежилета кейс
+/me выключает Пелену-12 и убирает. Выключает мультиметр и так же убирает его</code></pre>
+                    </div>
+                </div>
+
+                <a href="../../primery.html" class="back-btn">
+                    ← На главную
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <span class="footer__logo">🚔 СР ДПС</span>
+                <p class="footer__desc">Методическое пособие для сотрудников</p>
+            </div>
+            <div class="footer__copy">
+                <p>© 2026 Amazing Online Roleplay</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СР УГИБДД · Методичка</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Unbounded:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="SR UGIBDD" />
+    <link rel="manifest" href="site.webmanifest" />
+    <style>
+        .title-container { max-width: 850px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px; }
+        .title-hero { text-align: center; padding: 40px 20px; background: var(--bg-card); backdrop-filter: blur(20px); border-radius: var(--radius); border: 1px solid var(--border); position: relative; overflow: hidden; }
+        .title-hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at center, rgba(56, 189, 248, 0.03) 0%, transparent 70%); animation: rotateGlow 20s linear infinite; pointer-events: none; }
+        @keyframes rotateGlow { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .title-hero__icon { font-size: 4rem; display: block; margin-bottom: 10px; position: relative; z-index: 1; }
+        .title-hero__title { font-family: 'Unbounded', sans-serif; font-size: 2.2rem; font-weight: 900; background: linear-gradient(135deg, #fff, var(--primary), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative; z-index: 1; }
+        .title-hero__subtitle { color: var(--text-muted); font-size: 1.1rem; margin-top: 8px; position: relative; z-index: 1; }
+        .title-hero__badge { display: inline-block; margin-top: 12px; background: var(--primary); color: var(--bg); padding: 4px 20px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; position: relative; z-index: 1; }
+        .title-content { background: var(--bg-card); backdrop-filter: blur(20px); border-radius: var(--radius); border: 1px solid var(--border); padding: 40px; }
+        .title-content__text { font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); }
+        .title-content__text strong { color: var(--primary); }
+        .title-content__text .highlight { background: rgba(56, 189, 248, 0.06); border-left: 4px solid var(--primary); padding: 16px 20px; border-radius: 12px; display: block; margin: 20px 0; color: var(--text); }
+        .title-content__text .signature { display: block; margin-top: 30px; font-style: italic; color: var(--text-muted); text-align: right; }
+        .title-actions { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .title-actions .btn-primary { display: inline-flex; align-items: center; gap: 12px; padding: 16px 40px; border-radius: 16px; border: none; background: var(--primary); color: var(--bg); font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: var(--transition); cursor: pointer; }
+        .title-actions .btn-primary:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(56, 189, 248, 0.15); }
+        .title-actions .btn-secondary { display: inline-flex; align-items: center; gap: 12px; padding: 16px 40px; border-radius: 16px; border: 1px solid var(--border); background: rgba(255,255,255,0.03); color: var(--text); font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: var(--transition); }
+        .title-actions .btn-secondary:hover { background: rgba(56, 189, 248, 0.08); border-color: var(--primary); }
+        @media (max-width: 768px) { .title-hero__title { font-size: 1.6rem; } .title-content { padding: 24px; } .title-content__text { font-size: 0.95rem; } .title-actions .btn-primary, .title-actions .btn-secondary { width: 100%; justify-content: center; padding: 14px 20px; } }
+    </style>
+</head>
+<body>
+    <canvas id="particles"></canvas>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__logo">
+                <span class="sidebar__logo-icon">🚔</span>
+                <span class="sidebar__logo-text">СР УГИБДД</span>
+            </div>
+            <span class="sidebar__badge">Методичка</span>
+        </div>
+        <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+                <li><a href="book.html" class="sidebar__link"><span class="sidebar__icon">📖</span> Методичка</a></li>
+                <li><a href="primery.html" class="sidebar__link"><span class="sidebar__icon">🔢</span> Примеры</a></li>
+                <li><a href="practice.html" class="sidebar__link"><span class="sidebar__icon">🎯</span> Практика</a></li>
+                <li><a href="pages/sostav/index.html" class="sidebar__link"><span class="sidebar__icon">📋</span> Состав</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar__footer">
+            <button class="theme-toggle" id="themeToggle"><span class="theme-toggle__icon">☀️</span></button>
+            <span class="sidebar__version">v3.0</span>
+        </div>
+    </aside>
+    <main class="main-content">
+        <header class="topbar">
+            <button class="topbar__menu-btn" id="sidebarToggle">☰</button>
+            <div class="topbar__brand">
+                <span class="topbar__brand-icon">🚔</span>
+                <span class="topbar__brand-text">СР УГИБДД · <span>Методичка</span></span>
+            </div>
+            <div class="topbar__info"><span class="topbar__user">👤 Сотрудник</span></div>
+        </header>
+        <div class="page">
+            <section class="section">
+                <div class="title-container">
+                    <div class="title-hero">
+                        <span class="title-hero__icon">🚔</span>
+                        <h1 class="title-hero__title">Специализированная рота УГИБДД</h1>
+                        <p class="title-hero__subtitle">Методическое пособие для сотрудников</p>
+                        <span class="title-hero__badge">Нижегородская область 2026</span>
+                    </div>
+                    <div class="title-content">
+                        <div class="title-content__text">
+                            <p><strong>Уважаемые коллеги!</strong></p>
+                            <br>
+                            <p>Перед вами методическое пособие для сотрудников Специализированной роты УГИБДД. Данное пособие разработано с целью систематизации знаний, необходимых для качественного выполнения служебных обязанностей.</p>
+                            <p>Здесь вы найдёте информацию о структуре подразделения, основах законодательства, алгоритмах действий в различных ситуациях, а также практические примеры отыгровок.</p>
+                            <div class="highlight">
+                                <p><strong>Специализированная рота (СР) УГИБДД</strong> — структурное подразделение органов государственной власти, обеспечивающее выполнение особо важных задач по поддержанию безопасности дорожного движения, охране общественного порядка и пресечению правонарушений на территории обслуживания.</p>
+                            </div>
+                            <p>Деятельность сотрудников СР строится на принципах <strong>законности, дисциплины, оперативности и высокой профессиональной подготовки</strong>.</p>
+                            <span class="signature">С уважением,<br>врио командира СР УГИБДД<br><strong>Беркут Сергей Иванович</strong></span>
+                        </div>
+                    </div>
+                    <div class="title-actions">
+                        <a href="book.html" class="btn-primary">📖 Перейти к методичке</a>
+                        <a href="primery.html" class="btn-secondary">🔢 Смотреть примеры</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <span class="footer__logo">🚔 СР УГИБДД</span>
+                <p class="footer__desc">Методическое пособие для сотрудников</p>
+            </div>
+            <div class="footer__copy"><p>© 2026 Нижегородская область</p></div>
+        </div>
+    </footer>
+    <script src="js/theme.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

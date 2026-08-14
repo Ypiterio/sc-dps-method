@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Штурм · СР ДПС</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Unbounded:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/themes.css">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg" />
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="DPS Method" />
+    <link rel="manifest" href="../../site.webmanifest" />
+</head>
+<body>
+
+    <canvas id="particles"></canvas>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__logo">
+                <span class="sidebar__logo-icon">🚔</span>
+                <span class="sidebar__logo-text">СР ДПС</span>
+            </div>
+            <span class="sidebar__badge">Методичка</span>
+        </div>
+        <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+                <li><a href="../../primery.html" class="sidebar__link">
+                    <span class="sidebar__icon">🏠</span> Главная
+                </a></li>
+                <li><a href="index.html" class="sidebar__link active">
+                    <span class="sidebar__icon">🔫</span> Штурм
+                </a></li>
+            </ul>
+        </nav>
+        <div class="sidebar__footer">
+            <button class="theme-toggle" id="themeToggle">
+                <span class="theme-toggle__icon">☀️</span>
+            </button>
+            <span class="sidebar__version">v2.0</span>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <button class="topbar__menu-btn" id="sidebarToggle">☰</button>
+            <div class="topbar__brand">
+                <span class="topbar__brand-icon">🚔</span>
+                <span class="topbar__brand-text">СР ДПС · <span>Методичка</span></span>
+            </div>
+            <div class="topbar__info">
+                <span class="topbar__user">👤 Сотрудник</span>
+            </div>
+        </header>
+
+        <div class="page">
+            <section class="section">
+                <div class="section__header">
+                    <h1 class="section__title">🔫 Штурм</h1>
+                    <p class="section__subtitle">Основные штурмовые группы, виды и тактики штурма</p>
+                    <div class="section__divider"></div>
+                </div>
+
+                <h2 class="section__heading">Основные штурмовые группы</h2>
+                <div class="card-grid card-grid--4">
+                    <div class="card">
+                        <div class="card__icon">⚔️</div>
+                        <h3 class="card__title">Штурмовая</h3>
+                        <p class="card__desc">Зачистка, работа в двойках/тройках</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon">🛡️</div>
+                        <h3 class="card__title">Закрепление</h3>
+                        <p class="card__desc">Контроль позиций и точек</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon">🔄</div>
+                        <h3 class="card__title">Резерв</h3>
+                        <p class="card__desc">Усиление при необходимости</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon">🚁</div>
+                        <h3 class="card__title">Эвакуация</h3>
+                        <p class="card__desc">Вывод личного состава</p>
+                    </div>
+                </div>
+
+                <h2 class="section__heading">Виды штурма</h2>
+                <div class="card-grid card-grid--2">
+                    <div class="card card--primary">
+                        <div class="card__icon">👮</div>
+                        <h3 class="card__title">Полицейский</h3>
+                        <p class="card__desc">Минимизация потерь, использование светошумовых/газовых гранат, сохранение жизни заложников</p>
+                    </div>
+                    <div class="card card--danger">
+                        <div class="card__icon">💀</div>
+                        <h3 class="card__title">Армейский</h3>
+                        <p class="card__desc">Полное уничтожение противника, использование тяжелого вооружения</p>
+                    </div>
+                </div>
+
+                <h2 class="section__heading">Основные тактики штурма зданий</h2>
+                <div class="card-grid card-grid--4">
+                    <div class="card">
+                        <h3 class="card__title">«Крючок»</h3>
+                        <p class="card__desc">Применяется при вооружении короткоствольным оружием и широких дверях. Сотрудники одновременно становятся на колено, удерживаются за косяк двери, затем входят в помещение, пригнувшись и контролируя свои направления.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card__title">«Крест»</h3>
+                        <p class="card__desc">Применяется когда ширина дверей значения не имеет. Сотрудники входят один за другим по диагонали, практически одновременно зачищая обе мертвые зоны.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card__title">«Угол»</h3>
+                        <p class="card__desc">Уместен когда дверь расположена около стены. Вариант выполнения определяет №1, №2 подстраивается под действия направляющего.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card__title">«Диагональ»</h3>
+                        <p class="card__desc">Похожа на способ «угол», но сотрудники становятся спиной к одной из стен, контролируя всё помещение каждый в своём секторе. Применяется когда зачищаемое помещение последнее.</p>
+                    </div>
+                </div>
+
+                <a href="../../primery.html" class="back-btn">
+                    ← На главную
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <span class="footer__logo">🚔 СР ДПС</span>
+                <p class="footer__desc">Методическое пособие для сотрудников</p>
+            </div>
+            <div class="footer__copy">
+                <p>© 2026 Amazing Online Roleplay</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первая помощь · СР УГИБДД</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Unbounded:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/themes.css">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg" />
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="SR UGIBDD" />
+    <link rel="manifest" href="../../site.webmanifest" />
+</head>
+<body>
+    <canvas id="particles"></canvas>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__logo">
+                <span class="sidebar__logo-icon">🚔</span>
+                <span class="sidebar__logo-text">СР УГИБДД</span>
+            </div>
+            <span class="sidebar__badge">ПДП</span>
+        </div>
+        <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+                <li><a href="../../index.html" class="sidebar__link"><span class="sidebar__icon">🏠</span> Титульная</a></li>
+                <li><a href="../../book.html" class="sidebar__link"><span class="sidebar__icon">📖</span> Методичка</a></li>
+                <li><a href="../../primery.html" class="sidebar__link"><span class="sidebar__icon">🔢</span> Примеры</a></li>
+                <li><a href="index.html" class="sidebar__link active"><span class="sidebar__icon">🚑</span> Первая помощь</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar__footer">
+            <button class="theme-toggle" id="themeToggle"><span class="theme-toggle__icon">☀️</span></button>
+            <span class="sidebar__version">v3.0</span>
+        </div>
+    </aside>
+    <main class="main-content">
+        <header class="topbar">
+            <button class="topbar__menu-btn" id="sidebarToggle">☰</button>
+            <div class="topbar__brand">
+                <span class="topbar__brand-icon">🚔</span>
+                <span class="topbar__brand-text">СР УГИБДД · <span>ПДП</span></span>
+            </div>
+            <div class="topbar__info"><span class="topbar__user">👤 Сотрудник</span></div>
+        </header>
+        <div class="page">
+            <section class="section">
+                <div class="section__header">
+                    <h1 class="section__title">🚑 Первая помощь</h1>
+                    <p class="section__subtitle">Полный порядок оказания первой помощи при различных состояниях</p>
+                    <div class="section__divider"></div>
+                </div>
+
+                <!-- ========================================================= -->
+                <!-- ОБМОРОК -->
+                <!-- ========================================================= -->
+                <div class="method-block">
+                    <h3 class="method-block__title">Обморок</h3>
+                    <div class="code-block">
+                        <div class="code-block__header">
+                            <span class="code-block__badge">ПДП</span>
+                            <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                        </div>
+                        <pre class="code-block__content"><code>/me снимает набор ПП с плеча и достает аптечку
+/do Аптечка на полу.
+/me проверяет пульс человека
+/do Процесс...
+/me проверяет дыхание человека
+/do Процесс...
+/do Человек в обмороке.
+/me перекладывает человека в горизонтальное положение тела
+/do Процесс...
+/me расслабляет стесняющие дыхание элементы одежды
+/do Процесс...
+/me пробует привести человека в сознание</code></pre>
+                    </div>
+                </div>
+
+                <!-- ========================================================= -->
+                <!-- ОБМОРОК + ЗВОНОК 112 -->
+                <!-- ========================================================= -->
+                <div class="method-block">
+                    <h3 class="method-block__title">Обморок + звонок 112</h3>
+                    <div class="code-block">
+                        <div class="code-block__header">
+                            <span class="code-block__badge">ПДП</span>
+                            <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                        </div>
+                        <pre class="code-block__content"><code>/me достает телефон и звонит 1-1-2, сообщая место, пол и примерный возраст человека
+/me проверяет дыхание, пульс, переворачивает человека набок
+/me дабы в случае рвоты тот не захлебнулся
+/do Процесс...
+/me пробует привести человека в сознание</code></pre>
+                    </div>
+                </div>
+
+                <!-- ========================================================= -->
+                <!-- АРТЕРИАЛЬНОЕ КРОВОТЕЧЕНИЕ -->
+                <!-- ========================================================= -->
+                <div class="method-block">
+                    <h3 class="method-block__title">Артериальное кровотечение</h3>
+                    <div class="alert alert--danger">
+                        <div class="alert__icon">🚨</div>
+                        <div class="alert__content">
+                            <strong>Признаки артериального кровотечения:</strong>
+                            <ul>
+                                <li>Ярко-красная кровь</li>
+                                <li>Пульсирующая струя крови</li>
+                                <li>Кровь теряется быстро</li>
+                                <li>Пострадавший может терять сознание, бледнеть, появляется пот</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-block__header">
+                            <span class="code-block__badge">ПДП</span>
+                            <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                        </div>
+                        <pre class="code-block__content"><code>/me берёт телефон и вызывает СМП, затем достаёт аптечку, открывает и кладёт на пол
+/do Аптечка на полу.
+/me пережимает артерию кулаком в месте ранения, параллельно доставая бинты со жгутом
+/do Процесс...
+/me перевязывает место наложения жгута бинтом и накладывает жгут на это место
+/me ..выше ранения, делая первые два тура тугими
+/me достаёт бумажку и ручку, затем записывает время наложения жгута
+/do Процесс...
+/do Кровотечение прекратилось?</code></pre>
+                    </div>
+                </div>
+
+                <!-- ========================================================= -->
+                <!-- ВЕНОЗНОЕ КРОВОТЕЧЕНИЕ -->
+                <!-- ========================================================= -->
+                <div class="method-block">
+                    <h3 class="method-block__title">Венозное кровотечение</h3>
+                    <div class="alert alert--warning">
+                        <div class="alert__icon">🩸</div>
+                        <div class="alert__content">
+                            <strong>Признаки венозного кровотечения:</strong>
+                            <ul>
+                                <li>Тёмно-красная или бордовая кровь</li>
+                                <li>Ровная, не пульсирующая струя</li>
+                                <li>Кровь вытекает медленнее, но длительно</li>
+                                <li>Пострадавший относительно стабилен</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-block__header">
+                            <span class="code-block__badge">ПДП</span>
+                            <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                        </div>
+                        <pre class="code-block__content"><code>/me достает телефон, вызывает скорую помощь
+/me снимает с разгрузки аптечку, открыв ее, ставит на пол
+/do Аптечка открыта на полу.
+/me протягивает руку в аптечку после чего берет от туда марлю
+/do Процесс...
+/me накладывает марлю на рану
+/do Процесс...
+/me достает из аптечки бинт и вату после чего кладет вату на марлю и туго бинтует
+/do Процесс...
+/do Давящая повязка наложена. Кровотечение прекратилось?</code></pre>
+                    </div>
+                </div>
+
+                <!-- ========================================================= -->
+                <!-- КАПИЛЛЯРНОЕ КРОВОТЕЧЕНИЕ -->
+                <!-- ========================================================= -->
+                <div class="method-block">
+                    <h3 class="method-block__title">Капиллярное кровотечение</h3>
+                    <div class="alert alert--info">
+                        <div class="alert__icon">💧</div>
+                        <div class="alert__content">
+                            <strong>Признаки капиллярного кровотечения:</strong>
+                            <ul>
+                                <li>Кровь ярко-красная, сочится по поверхности кожи</li>
+                                <li>Струя очень мелкая, медленная</li>
+                                <li>Обычно сопровождает царапины, порезы или ожоги</li>
+                                <li>Пострадавший стабильный</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-block__header">
+                            <span class="code-block__badge">ПДП</span>
+                            <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                        </div>
+                        <pre class="code-block__content"><code>/me достает телефон, вызывает скорую помощь
+/me снимает с разгрузки аптечку, открыв ее, ставит на пол
+/do Аптечка открыта на полу.
+/me достает из аптечки антисептическую повязку
+/do Процесс...
+/do Антисептическая повязка в руках.
+/me обматывает антисептическую повязку на руку (другая часть тела)
+/do Процесс...
+/do Кровотечение прекратилось?</code></pre>
+                    </div>
+                </div>
+
+                <!-- ========================================================= -->
+                <!-- ОТКРЫТЫЙ ПЕРЕЛОМ -->
+                <!-- ========================================================= -->
+                <div class="method-block">
+                    <h3 class="method-block__title">Открытый перелом</h3>
+                    <div class="code-block">
+                        <div class="code-block__header">
+                            <span class="code-block__badge">ПДП</span>
+                            <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                        </div>
+                        <pre class="code-block__content"><code>/me кладет человека на пол
+/do Процесс...
+/do Человек в горизонтальном положении.
+/me достает телефон, вызывает скорую помощь
+/me снимает с разгрузки аптечку, открыв ее, ставит на пол
+/do Аптечка на полу.
+/me достает нож и разрезает одежду около перелома
+/do Процесс...
+/me достает из аптечки медицинскую шину, накладывая ее на место перелома
+/do Процесс...
+/me берет бинты и туго фиксирует ими шину
+/do Процесс...
+/do Шина зафиксирована.</code></pre>
+                    </div>
+                </div>
+
+                <!-- ========================================================= -->
+                <!-- ЗАКРЫТЫЙ ПЕРЕЛОМ -->
+                <!-- ========================================================= -->
+                <div class="method-block">
+                    <h3 class="method-block__title">Закрытый перелом</h3>
+                    <div class="code-block">
+                        <div class="code-block__header">
+                            <span class="code-block__badge">ПДП</span>
+                            <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                        </div>
+                        <pre class="code-block__content"><code>/me кладет человека на пол в горизонтальное положение
+/do Процесс...
+/do Человек в горизонтальном положении.
+/me достает телефон, вызывает скорую помощь
+/me снимает с разгрузки аптечку, открыв ее, ставит на пол
+/do Аптечка на полу.
+/me достает из аптечки медицинскую шину, накладывая ее на место перелома
+/do Процесс...
+/me берет бинты и туго фиксирует ими шину
+/do Процесс...
+/do Шина зафиксирована.</code></pre>
+                    </div>
+                </div>
+
+                <!-- ========================================================= -->
+                <!-- ОБМОРОЖЕНИЕ -->
+                <!-- ========================================================= -->
+                <div class="method-block">
+                    <h3 class="method-block__title">Обморожение</h3>
+                    <div class="code-block">
+                        <div class="code-block__header">
+                            <span class="code-block__badge">ПДП</span>
+                            <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                        </div>
+                        <pre class="code-block__content"><code>/me берет человека под руку и ведет в теплое место
+/do Процесс...
+/me начинает осторожно растирать пораженные места
+/do Процесс...
+/me достает из разгрузки аптечку и раскрывая ее достает согревающую повязку
+/do Процесс...
+/me накладывает повязку на пораженные участки тела
+/do Процесс...</code></pre>
+                    </div>
+                </div>
+
+                <!-- ========================================================= -->
+                <!-- ПУЛЕВОЕ РАНЕНИЕ -->
+                <!-- ========================================================= -->
+                <div class="method-block">
+                    <h3 class="method-block__title">Пулевое ранение</h3>
+                    <div class="code-block">
+                        <div class="code-block__header">
+                            <span class="code-block__badge">ПДП</span>
+                            <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                        </div>
+                        <pre class="code-block__content"><code>/me достает телефон, вызывает скорую медицинскую помощь
+/me запрокидывает голову человека назад, чуть ее поворачивая (если без сознания)
+/do Процесс...
+/me снимает с разгрузки аптечку, открыв ее, ставит на пол
+/do Аптечка на полу.
+/me достаёт шприц с обезболивающим из аптечки
+/do Процесс...
+/me вкалывает обезболивающее человеку
+/do Процесс...
+/me достает зеленку из аптечки и обрабатывает ею края раны
+/do Процесс...
+/me достает давящую повязку из аптечки и накладывает ее на пулевое отверстие
+/do Процесс...
+/do Тампонад наложен.
+/me разрывает одежду в зоне ранения
+/do Процесс...
+/do Одежда разорвана.
+/do Первая помощь оказана.
+/me оценивает состояние пострадавшего, осматривает на наличие признаков внутреннего кровотечения
+/do Процесс осмотра...
+/me проверяет пульс, дыхание, кожу на бледность и холодность
+/do Процесс проверки...
+/me достает телефон и вызывает скорую помощь, сообщая симптомы и состояние пострадавшего
+/me укладывает человека в горизонтальное положение
+/do Процесс...
+/me приподнимает ноги, чтобы улучшить кровообращение
+/do Процесс...
+/me накрывает пострадавшего одеялом для сохранения тепла
+/do Процесс...
+/me контролирует сознание, дыхание и пульс до приезда медиков
+/do Процесс контроля...
+/do Внутреннее кровотечение требует срочной медицинской помощи</code></pre>
+                    </div>
+                </div>
+
+                <!-- ========================================================= -->
+                <!-- ОТКРЫТОЕ КРОВОТЕЧЕНИЕ (ПДП) -->
+                <!-- ========================================================= -->
+                <div class="method-block">
+                    <h3 class="method-block__title">Открытое кровотечение (ПДП)</h3>
+                    <div class="code-block">
+                        <div class="code-block__header">
+                            <span class="code-block__badge">ПДП</span>
+                            <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                        </div>
+                        <pre class="code-block__content"><code>/me достает телефон и вызывает скорую помощь
+/me снимает с разгрузки аптечку, открыв ее, ставит на пол
+/do Аптечка на полу.
+/me осматривает рану и определяет источник кровотечения
+/do Процесс осмотра...
+/me накладывает стерильную марлю на рану
+/do Процесс...
+/me туго перевязывает бинтом для остановки кровотечения
+/do Процесс...
+/me при необходимости накладывает давящую повязку или жгут
+/do Процесс...
+/me контролирует пульс и дыхание пострадавшего
+/do Процесс контроля...
+/do Кровотечение остановлено?
+/me держит пострадавшего в горизонтальном положении до приезда медиков
+/do Процесс завершен.</code></pre>
+                    </div>
+                </div>
+
+                <!-- ========================================================= -->
+                <!-- ВНУТРЕННЕЕ КРОВОТЕЧЕНИЕ -->
+                <!-- ========================================================= -->
+                <div class="method-block">
+                    <h3 class="method-block__title">Внутреннее кровотечение</h3>
+                    <div class="alert alert--danger">
+                        <div class="alert__icon">⚠️</div>
+                        <div class="alert__content">
+                            <strong>Признаки внутреннего кровотечения:</strong>
+                            <ul>
+                                <li>На первый взгляд нет внешней крови</li>
+                                <li>Пострадавший бледный, кожа холодная</li>
+                                <li>Слабость, тахикардия, падение давления</li>
+                                <li>Возможны боли в животе, груди или месте удара</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-block__header">
+                            <span class="code-block__badge">ПДП</span>
+                            <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                        </div>
+                        <pre class="code-block__content"><code>/me оценивает состояние пострадавшего
+/do Пострадавший бледен, кожа холодная, пульс слабый
+/me укладывает человека в горизонтальное положение
+/do Процесс...
+/me приподнимает ноги, чтобы улучшить кровообращение
+/do Процесс...
+/me накрывает пострадавшего одеялом для сохранения тепла
+/do Процесс...
+/me вызывает скорую помощь, сообщая симптомы
+/me контролирует сознание, дыхание и пульс до приезда медиков
+/do Процесс контроля...
+/do Внутреннее кровотечение требует срочной медицинской помощи</code></pre>
+                    </div>
+                </div>
+
+                <a href="../../primery.html" class="back-btn">← Назад к примерам</a>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <span class="footer__logo">🚔 СР УГИБДД</span>
+                <p class="footer__desc">Методическое пособие для сотрудников</p>
+            </div>
+            <div class="footer__copy"><p>© 2026 Нижегородская область</p></div>
+        </div>
+    </footer>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДТП · СР ДПС</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Unbounded:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/themes.css">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg" />
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="DPS Method" />
+    <link rel="manifest" href="../../site.webmanifest" />
+</head>
+<body>
+
+    <canvas id="particles"></canvas>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__logo">
+                <span class="sidebar__logo-icon">🚔</span>
+                <span class="sidebar__logo-text">СР ДПС</span>
+            </div>
+            <span class="sidebar__badge">Методичка</span>
+        </div>
+        <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+                <li><a href="../../primery.html" class="sidebar__link">
+                    <span class="sidebar__icon">🏠</span> Главная
+                </a></li>
+                <li><a href="index.html" class="sidebar__link active">
+                    <span class="sidebar__icon">🚗</span> ДТП
+                </a></li>
+            </ul>
+        </nav>
+        <div class="sidebar__footer">
+            <button class="theme-toggle" id="themeToggle">
+                <span class="theme-toggle__icon">☀️</span>
+            </button>
+            <span class="sidebar__version">v2.0</span>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <button class="topbar__menu-btn" id="sidebarToggle">☰</button>
+            <div class="topbar__brand">
+                <span class="topbar__brand-icon">🚔</span>
+                <span class="topbar__brand-text">СР ДПС · <span>Методичка</span></span>
+            </div>
+            <div class="topbar__info">
+                <span class="topbar__user">👤 Сотрудник</span>
+            </div>
+        </header>
+
+        <div class="page">
+            <section class="section">
+                <div class="section__header">
+                    <h1 class="section__title">🚗 Оформление ДТП</h1>
+                    <p class="section__subtitle">Полный порядок действий при оформлении дорожно-транспортного происшествия</p>
+                    <div class="section__divider"></div>
+                </div>
+
+                <h2 class="section__heading">Первая часть</h2>
+                <div class="alert alert--info">
+                    <div class="alert__icon">📋</div>
+                    <div class="alert__content">
+                        <p>В случае если требуется:</p>
+                        <ul>
+                            <li>Вызвать скорую помощь</li>
+                            <li>Оказать ПДП</li>
+                            <li>Представиться всем</li>
+                            <li>Ограждения</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-block__header">
+                        <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                    </div>
+                    <pre class="code-block__content"><code>/me открыл багажник авто, после чего достал сумку
+/me из сумки достал документы оформления ДТП, начал записывать своё звание, должность
+
+Вопросы по типу: Какое примерное время.
+
+/me записал время, дату ДТП
+/me записал марку, цвет, номера первого авто
+/me записал марку, цвет, номера второго авто
+
+"Предоставьте ваши документы (Только ВУ)"
+
+/me взял первое ВУ в руку, переписал данные в документ оформления ДТП
+/me взял первое ВУ в руку, переписал данные в документ оформления ДТП
+
+Вернуть ВУ
+Положить в подсумку (Или куда-то) документ оформления ДТП.</code></pre>
+                </div>
+
+                <h2 class="section__heading">Вторая часть</h2>
+                <p class="section__subtitle" style="margin-bottom: 16px;">Начать зарисовывать схему ДТП</p>
+
+                <div class="code-block">
+                    <div class="code-block__header">
+                        <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                    </div>
+                    <pre class="code-block__content"><code>/me взял чистый лист, начал зарисовывать схему ДТП
+/me поставил подпис, дату, положил к документу оформления ДТП
+
+/me взял 3 протокол и ручку, начал заполнять
+
+Подошел к первой машине:
+/me переписал цвет, марку, номер авто, затем переписал из первого протокола информацию о водителе
+/me записал показатели спидометра, положения рычага переключения передач
+/me записал повреждения первого ТС
+
+Подошел ко второй машине:
+/me переписал цвет, марку, номер авто, затем переписал из первого протокола информацию о водителе
+/me записал показатели спидометра, положения рычага переключения передач
+/me записал повреждения второго ТС
+/me поставил подпись, дату в документе</code></pre>
+                </div>
+
+                <h2 class="section__heading">Третья часть</h2>
+
+                <div class="code-block">
+                    <div class="code-block__header">
+                        <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                    </div>
+                    <pre class="code-block__content"><code>/me достал четвёртый документ, начал заполнять протокол контроля трезвости в отношению первого водителя
+/me закончил вводить нужную информацию, поставил подпись, дату
+
+Подходим к первому водителю:
+"Если согласны пройти сведетельство о стадии алкогольного опьянения ставьте подпись"
+
+После отказа/Подписи:
+/me забрал протокол у водителя, положил его к документам
+/me из разгрузки достал алкотестер с медной трубкой, указал на трубку человеку
+/me включил устройство, откалибровал его, приставил к губам человека напротив
+"Дуйте"
+
+/do Алкотестер показал менее 0.16 промилле?
+
+===Это к двум людям так подойти===
+
+/me отсоеденил устройство от губ человека, зафиксировал показания
+/me записал данные в протокол, поставил подпись, дату</code></pre>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-block__header">
+                        <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                    </div>
+                    <pre class="code-block__content"><code>Вопрос к двум лицам:
+"Фиксация имееться у кого-то из вас?"
+
+Если ответ да:
+"Смотришь, оформляешь по ПДД и т.д"
+
+Если ответ нет:
+/me из сумки достаю два листка и две ручки, передаю водителям
+
+"Это пояснительные записки, вы (Первый водитель) запишите со своих глаз, а вы (второй водитель) запишите со своих глаз как видели ДТП"
+
+/me взял заполненые записки, начал ознакамливатся
+/do Что написано в записке?
+Слушаешь самую крайнюю версию
+
+Если 2 версии сходятся то указуешь виновника ДТП (Типо если водитель признался что он виноват)
+Выписуешь штрафы
+/me достал документ оформления ДТП, запишу виновника ДТП
+
+Если никто не признался в нарушении:
+"ДТП квалифицируется как спорное. Виновное лицо не установлено из-за отсутствия фиксации и противоречивых пояснений. Материалы будут оформлены без вынесения постановления."
+
+/me открыл документ оформления ДТП и сделал отметку "ДТП спорное, виновное лицо не установлено"
+/me поставил подпись и дату</code></pre>
+                </div>
+
+                <h2 class="section__heading">Четвертая часть</h2>
+                <p class="section__subtitle" style="margin-bottom: 16px;">Уведомить водителей об их дальнейших действиях</p>
+
+                <div class="code-block">
+                    <div class="code-block__header">
+                        <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                    </div>
+                    <pre class="code-block__content"><code>"Так как ДТП спорное, вы можете разрешить его через страховую компанию или через суд. ГИБДД не выносит постановление и не назначает штраф."
+
+/me передал материалы водителям и сообщил порядок дальнейших действий</code></pre>
+                </div>
+
+                <h2 class="section__heading">Финальная часть</h2>
+
+                <div class="code-block">
+                    <div class="code-block__header">
+                        <button class="code-block__copy" onclick="copyCode(this)">📋 Копировать</button>
+                    </div>
+                    <pre class="code-block__content"><code>/me закрыл бланк оформления ДТП и убрал документы в сумку
+
+Сбор документов в одну папку:
+/me взял пустую папку, подписал как "Авария (Дата, Время)"
+/me собрал все материалы ДТП и приложил их к делу
+
+"Вызовите механика для починки ТС".</code></pre>
+                </div>
+
+                <a href="../../primery.html" class="back-btn">
+                    ← На главную
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <span class="footer__logo">🚔 СР ДПС</span>
+                <p class="footer__desc">Методическое пособие для сотрудников</p>
+            </div>
+            <div class="footer__copy">
+                <p>© 2026 Amazing Online Roleplay</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>
